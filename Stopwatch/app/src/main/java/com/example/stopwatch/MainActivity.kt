@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val second = (time % 6000) / 100
             val minute = time / 6000
 
+            // timer 함수 -> 백그라운드에서 실행 -> 메인 스레드 이외의 스레드에서 ui resource에 접근하려고 해서(.text) 에러 발생 -> runOnUiThread 사용
             runOnUiThread {
                 if(isRunning) {
                     tv_millisecond.text = if(milli_second < 10) ".0${milli_second}" else ".${milli_second}"
