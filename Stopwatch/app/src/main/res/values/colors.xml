@@ -5,4 +5,5 @@
     <color name="btn_start">#673AB7</color>
     <color name="btn_refresh">#FFEB3B</color>
     <color name="btn_pause">#E91E63</color>
+    <color name="blue">#0059FF</color>
 </resources>

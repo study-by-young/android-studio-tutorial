@@ -3,4 +3,7 @@
     <string name="btn_start">시작</string>
     <string name="btn_refresh">초기화</string>
     <string name="btn_pause">일시정지</string>
+    <string name="btn_start_eng">Start</string>
+    <string name="btn_refresh_eng">Clear</string>
+    <string name="btn_pause_eng">Pause</string>
 </resources>
