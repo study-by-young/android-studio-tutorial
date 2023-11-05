@@ -8,7 +8,7 @@ import androidx.room.Query
 @Dao
 interface TodoDao {
 
-    @Query("SELECT * FROM TodoEntity")
+    @Query("SELECT * FROM TodoEntity ORDER BY importance, id")
     fun getAllTodo() : List<TodoEntity>
 
     @Insert
