@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.todolist.databinding.ItemTodoBinding
 import com.example.todolist.db.TodoEntity
 
-class TodoRecyclerViewAdapter(private val todoList : ArrayList<TodoEntity>) : RecyclerView.Adapter<TodoRecyclerViewAdapter.MyViewHolder>() {
+class TodoRecyclerViewAdapter(private val todoList : ArrayList<TodoEntity>,
+                              private val listener : OnItemLongClickListener) : RecyclerView.Adapter<TodoRecyclerViewAdapter.MyViewHolder>() {
     // ViewHolder 패턴 : 각 뷰 객체를 뷰홀더에 보관해서 반복 메서드 호출을 줄여 속도를 개선
 
     inner class MyViewHolder(binding : ItemTodoBinding) : RecyclerView.ViewHolder(binding.root) {
@@ -43,6 +44,11 @@ class TodoRecyclerViewAdapter(private val todoList : ArrayList<TodoEntity>) : Re
 
         holder.tv_importance.text = todoData.importance.toString()
         holder.tv_title.text = todoData.title
+
+        holder.root.setOnLongClickListener {
+            listener.onLongClick(position)
+            false // false : 다른 클릭 이벤트(onClick) 도 실행됨, true : 오직 onLongClick 만 실행됨
+        }
     }
 
 }
