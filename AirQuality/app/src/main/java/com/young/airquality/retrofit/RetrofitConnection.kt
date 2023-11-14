@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class RetrofitConnection {
-    companion object {
+    companion object { // 레트로핏 객체 생성
         private const val BASE_URL = "https://api.airvisual.com/v2/"
         private var INSTANCE : Retrofit? = null
 
