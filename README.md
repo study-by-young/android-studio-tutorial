@@ -18,16 +18,39 @@
 
 ---
 
-## 프로젝트 목록 & 주요 기술
+## 주요 프로젝트 & 기술
 
-- **스레드를 이용한 스톱워치 앱**   
-   - Thread
-   - ConstraintLayout
-- **데이터베이스를 사용해 보는 투두 리스트 앱**
-   - Room Database
-   - RecyclerView
-- **API 통신을 사용해 보는 미세먼지 앱**
-   - Retrofit2 라이브러리
+
+### 🌫️ AirQuality  
+> API 통신을 사용해 보는 미세먼지 측정 앱   
+> ➡️ **[프로젝트로 이동](./AirQuality)**
+
+| 사용 기술 | 설명 |
+|---------|------|
+| `Retrofit2` | REST API 요청 및 JSON 응답 파싱 |
+| `OkHttp` (암묵적 포함) | 네트워크 통신 처리 |
+
+---
+
+### ⏱️ Stopwatch  
+> 스레드를 활용한 간단한 스톱워치 앱   
+> ➡️ **[프로젝트로 이동](./Stopwatch)**
+
+| 사용 기술 | 설명 |
+|---------|------|
+| `Thread` | 시간 측정 및 UI 반영을 위한 백그라운드 처리 |
+| `ConstraintLayout` | 유연한 화면 배치를 위한 레이아웃 구성 |
+
+---
+
+### ✅ TodoList  
+> 데이터베이스를 사용해 보는 투두 리스트 앱   
+> ➡️ **[프로젝트로 이동](./TodoList)**
+
+| 사용 기술 | 설명 |
+|---------|------|
+| `Room Database` | Todo 데이터 영속성 및 CRUD 구현 |
+| `RecyclerView` | 동적 리스트 UI 및 ViewHolder 구조 이해 |
 
 ---
 
