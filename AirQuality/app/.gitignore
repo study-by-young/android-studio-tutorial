@@ -1,1 +1,16 @@
+.idea/**
 /build
+
+# API Keys and sensitive files
+google-services.json
+local.properties
+*.keystore
+*.jks
+
+# Firebase
+app/google-services.json
+**/google-services.json
+
+# Local configuration
+**/apikeys.properties
+**/secrets.properties

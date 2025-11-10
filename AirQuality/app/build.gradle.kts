@@ -1,8 +1,21 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("com.google.gms.google-services")
+}
+
+// local.properties 읽기
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localProperties.load(localPropertiesFile.inputStream())
+}
+
+fun getLocalProperty(key: String, defaultValue: String = ""): String {
+    return localProperties.getProperty(key, defaultValue)
 }
 
 android {
@@ -17,6 +30,16 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Manifest
+        manifestPlaceholders["ADMOB_APP_ID"] = getLocalProperty("ADMOB_APP_ID")
+        manifestPlaceholders["GEO_API_KEY"] = getLocalProperty("GEO_API_KEY")
+        manifestPlaceholders["AIR_API_KEY"] = getLocalProperty("AIR_API_KEY")
+
+        // 코드/레이아웃
+        resValue("string", "admob_app_id", getLocalProperty("ADMOB_APP_ID"))
+        resValue("string", "geo_api_key", getLocalProperty("GEO_API_KEY"))
+        resValue("string", "air_api_key", getLocalProperty("AIR_API_KEY"))
     }
 
     buildTypes {
@@ -38,6 +61,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
