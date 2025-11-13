@@ -55,6 +55,5 @@
 ---
 
 ## 개발자
-**김주영(xxyoungkim)**  
 - Email: [xxyoungkim@gmail.com](mailto:xxyoungkim@gmail.com)  
 - GitHub: [https://github.com/xxyoungkim](https://github.com/xxyoungkim)  
