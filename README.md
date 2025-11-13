@@ -51,9 +51,3 @@
 |---------|------|
 | Room | Todo 데이터 영속성 및 CRUD 구현 |
 | RecyclerView | 동적 리스트 UI 및 ViewHolder 구조 이해 |
-
----
-
-## 개발자
-- Email: [xxyoungkim@gmail.com](mailto:xxyoungkim@gmail.com)  
-- GitHub: [https://github.com/xxyoungkim](https://github.com/xxyoungkim)  
